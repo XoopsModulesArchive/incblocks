@@ -1,0 +1,12 @@
+<table width='100%' border='0' cellpadding='4' cellspacing='1'>
+<{foreach item=story from=$block.stories}>
+ <tr class="bg1"><td style="border-bottom:1px dotted">
+ <b><a href="<{$xoops_url}>/modules/news/article.php?storyid=<{$story.story_id}>"><{$story.title}></a></b> <i><{$lang_postedby}> <{$story.poster}>, <{$lang_on}> <{$story.posttime}></i><br>
+ <{$story.imglink}><{$story.hometext}>
+ <{if $story.fullcount > 0}>
+  <img src="<{$xoops_url}>/modules/incblocks/hand.gif"><a href="<{$xoops_url}>/modules/news/article.php?storyid=<{$story.story_id}>"><{$story.more}></a>
+ <{/if}>
+ <{$story.commentlink}>
+ </td></tr>
+<{/foreach}>
+</table>
